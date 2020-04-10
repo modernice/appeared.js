@@ -1,8 +1,15 @@
 {
   "name": "@modernice/appeared",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Track DOM elements scrolling in and out of the view.",
-  "keywords": ["DOM", "element", "appear", "track", "visible", "view"],
+  "keywords": [
+    "DOM",
+    "element",
+    "appear",
+    "track",
+    "visible",
+    "view"
+  ],
   "author": {
     "name": "Saman Hosseini",
     "email": "saman@modernice.ltd"
@@ -13,7 +20,9 @@
   "module": "dist/appeared.js",
   "browser": "dist/appeared.umd.js",
   "unpkg": "dist/appeared.umd.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf ./dist && rollup -c rollup.config.js"
   },
