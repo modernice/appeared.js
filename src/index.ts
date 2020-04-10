@@ -5,7 +5,7 @@ export interface Options {
   threshold?: number
 
   /**
-   * Trigger the 'appear' and 'disappear' callbacks multiple times?
+   * Trigger the 'appear' and 'disappear' callbacks multiple times for each element?
    */
   multiple?: boolean
 
@@ -48,12 +48,12 @@ export default function appeared(el: Elements, options?: Options) {
       const disappearCount = disappearCounts.has(el) ? disappearCounts.get(el)+1 : 1
       disappearCounts.set(el, disappearCount)
 
-      if (options?.disappear) {
-        options.disappear(el, disappearCount)
+      if (!options?.multiple && disappearCount > 1) {
+        return
       }
 
-      if (!options?.multiple) {
-        observer.disconnect()
+      if (options?.disappear) {
+        options.disappear(el, disappearCount)
       }
 
       return
@@ -62,12 +62,12 @@ export default function appeared(el: Elements, options?: Options) {
     appearCount++
     appearCounts.set(el, appearCount)
 
-    if (options?.appear) {
-      options.appear(el, appearCount)
+    if (!options?.multiple && appearCount > 1) {
+      return
     }
 
-    if (!options?.disappear && !options?.multiple) {
-      observer.disconnect()
+    if (options?.appear) {
+      options.appear(el, appearCount)
     }
   }, { threshold: options?.threshold })
 
