@@ -15,14 +15,7 @@ export default [{
 
   plugins: [
     ts(),
-    babel({
-      extensions: ['.ts'],
-      presets: [['@babel/preset-env', {
-        targets: {
-          browsers: '> 5%, last 2 versions, not ie 11, not dead',
-        },
-      }]]
-    }),
+    babel(),
   ],
 }, {
   input: 'src/index.ts',
@@ -35,57 +28,7 @@ export default [{
 
   plugins: [
     ts(),
-    babel({
-      extensions: ['.ts'],
-      presets: [['@babel/preset-env', {
-        targets: {
-          browsers: '> 5%, last 2 versions, not ie 11, not dead',
-        },
-      }]]
-    }),
-    terser(),
-  ],
-}, {
-  input: 'src/index.ts',
-
-  output: [{
-    format: 'es',
-    file: 'dist/appeared.ie11.js',
-  }, {
-    format: 'cjs',
-    file: 'dist/appeared.ie11.common.js',
-  }],
-
-  plugins: [
-    ts(),
-    babel({
-      extensions: ['.ts'],
-      presets: [['@babel/preset-env', {
-        targets: {
-          browsers: '> 1%, last 2 versions, not dead, ie 11',
-        },
-      }]]
-    }),
-  ],
-}, {
-  input: 'src/index.ts',
-
-  output: {
-    format: 'umd',
-    name: 'appeared',
-    file: 'dist/appeared.ie11.umd.js',
-  },
-
-  plugins: [
-    ts(),
-    babel({
-      extensions: ['.ts'],
-      presets: [['@babel/preset-env', {
-        targets: {
-          browsers: '> 1%, last 2 versions, not dead, ie 11',
-        },
-      }]]
-    }),
+    babel(),
     terser(),
   ],
 }]

@@ -1,12 +1,20 @@
 # appeared.js
 
-Simple tracking of DOM elements scrolling in and out of the view.  
-Doesn't support IE11.
+Simple tracking of DOM elements scrolling in and out of the view.
 
 ## Install
 
+### Package Manager
+
 ```sh
 yarn add @modernice/appeared // npm install @modernice/appeared --save
+```
+
+### CDN
+
+#### Modern version
+```html
+<script src="https://unpkg.com/@modernice/appeared"></script>
 ```
 
 ## Use
