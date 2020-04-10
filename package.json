@@ -13,6 +13,7 @@
   "module": "dist/appeared.js",
   "browser": "dist/appeared.umd.js",
   "unpkg": "dist/appeared.umd.js",
+  "files": ["dist"],
   "scripts": {
     "build": "rimraf ./dist && rollup -c rollup.config.js"
   },
