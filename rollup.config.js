@@ -7,10 +7,10 @@ export default [{
 
   output: [{
     format: 'es',
-    file: 'dist/appeared.js',
+    file: 'dist/index.js',
   }, {
     format: 'cjs',
-    file: 'dist/appeared.common.js',
+    file: 'dist/index.common.js',
   }],
 
   plugins: [
@@ -23,7 +23,7 @@ export default [{
   output: {
     format: 'umd',
     name: 'appeared',
-    file: 'dist/appeared.umd.js',
+    file: 'dist/index.umd.js',
   },
 
   plugins: [
