@@ -2,6 +2,7 @@
   "name": "@modernice/appeared",
   "version": "0.1.0",
   "description": "Track DOM elements scrolling in and out of the view.",
+  "keywords": ["DOM", "element", "appear", "track", "visible", "view"],
   "author": {
     "name": "Saman Hosseini",
     "email": "saman@modernice.ltd"
