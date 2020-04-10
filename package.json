@@ -7,7 +7,7 @@
     "email": "saman@modernice.ltd"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "main": "dist/appeared.common.js",
   "module": "dist/appeared.js",
   "browser": "dist/appeared.umd.js",
