@@ -1,6 +1,6 @@
 {
   "name": "@modernice/appeared",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Track DOM elements scrolling in and out of the view.",
   "keywords": [
     "DOM",
